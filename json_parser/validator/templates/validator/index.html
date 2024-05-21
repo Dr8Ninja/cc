@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Validator</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'validator/css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>JSON Validator</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Validate</button>
+        </form>
+        {% if result %}
+            <p>{{ result }}</p>
+        {% endif %}
+    </div>
+    <script src="{% static 'validator/js/scripts.js' %}"></script>
+</body>
+</html>
