@@ -1,6 +1,8 @@
 cc/*
-.vscode/*
+.vscode/
 .gitignore
 wc/cwc
 __pycache__/
 *.sqlite3
+.mvn/
+.idea/
